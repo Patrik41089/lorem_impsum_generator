@@ -42,7 +42,7 @@ def generovani_text(pocet_slov): #pocet slov k pouziti ke generovani nahodneho m
     vygenerovana_slova = [] #prazdny seznam kam se mi budou vypisovat generovana slova s koncovkou
     predlozka = False #nastaveni predlozky na false
     for i in range(pocet_slov): #pro zadany pocet slov dela pro kazde slovo tento cyklus
-        slovo = nahodne_slovo(random.randint(2, 10))
+        slovo = nahodne_slovo(random.randint(2, 10))    #nahodna delka slova
         if random.randint(0,1) < 0.5:  #0.5 je polovina rozsahu generace nahodneho cisla od 0 do 1 takze je to 50% sance na pridani koncovky ke kazdemu generovanemu slovu
             slovo += nahodna_koncovka() #slouceni slova a koncovky
             
@@ -52,10 +52,10 @@ def generovani_text(pocet_slov): #pocet slov k pouziti ke generovani nahodneho m
         else:
             predlozka = False   #nastaveni predlozky na false aby se cyklus opakoval
         
-        vygenerovana_slova.append(slovo) #vlozeni hotoveho slova s koncovku do seznamu ktery s vypise pouzdeji
+        vygenerovana_slova.append(slovo) #vlozeni hotoveho slova s koncovku do seznamu ktery se vypise pozdeji
 
     text = ' '.join(vygenerovana_slova) #slouceni pomoci join aby se to nevypisovalo v seznamu
     return text
 
-text = generovani_text(random.randint(20, 150))
+text = generovani_text(random.randint(20, 150)) #nahodne mnozstvi textu
 print(text)
