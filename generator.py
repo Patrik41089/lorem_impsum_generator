@@ -20,9 +20,9 @@ def nahodna_samohlaska():
 #generace písmena s délkou k pouziti na slozeni slova z pismen
 def nahodne_slovo(delka):               
     slovo = random.choice(seznam)
-    for i in range(1,delka): #od 1 protoze na prvni misto dam nahodne pismeno
-        if i %2 == 0:
-            slovo += nahodna_samohlaska()
+    for i in range(1,delka): #od 1 protoze na prvni misto dam nahodne pismeno ze seznamu
+        if i %2 == 0:   #stridani samohlasek a souhlasek aby se nemohlo stat ze jsou nekolikrat nesmyslne zasebou
+            slovo += nahodna_samohlaska() 
         else:
             slovo += nahodna_souhlaska()
     return slovo
