@@ -3,14 +3,29 @@ seznam = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r
 
 samohlasky = ["a","e","i","y","o","u"]
 
+souhlasky = [pismeno for pismeno in seznam if pismeno not in samohlasky] #vybere souhlasky
+
 anglictina_predlozky = ["an","the", "in", "on", "at", "up"]
 
 anglictina_konce = ["ing","tion","ed","s"]
 
+#generace souhlasky
+def nahodna_souhlaska():
+    souhlaska = random.choice(souhlasky)
+    return(souhlaska)
+#generace nahodne samohlasky
+def nahodna_samohlaska():
+    samohlaska = random.choice(samohlasky)
+    return samohlaska
 #generace písmena s délkou k pouziti na slozeni slova z pismen
 def nahodne_slovo(delka):               
-    slovo = ''.join(random.choice(seznam) for i in range(delka))
-    return slovo    #vraceni hodnoty z funkce abych ji mohl pouzit
+    slovo = random.choice(seznam)
+    for i in range(1,delka): #od 1 protoze na prvni misto dam nahodne pismeno
+        if i %2 == 0:
+            slovo += nahodna_samohlaska()
+        else:
+            slovo += nahodna_souhlaska()
+    return slovo
 
 #generace koncovky
 def nahodna_koncovka():
