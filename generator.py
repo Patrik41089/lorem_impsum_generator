@@ -8,8 +8,12 @@ def nahodne_slovo(delka):
     slovo = ''.join(random.choice(seznam) for i in range(delka))
     return slovo
 
-vygenerovana_slova = ' '.join(nahodne_slovo(random.randint(2, 10)) for i in range(random.randint(10,20)))
+def nahodna_koncovka():
+    koncovka =  ''.join(random.choice(anglictina_konce))
+    return koncovka
 
+vygenerovana_slova = ' '.join(nahodne_slovo(random.randint(2, 10)) for i in range(random.randint(2,10)))
 
+text = ''.join(vygenerovana_slova + random.choice(anglictina_konce))
 
-print(vygenerovana_slova)
+print(text)
