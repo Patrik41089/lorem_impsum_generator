@@ -4,7 +4,8 @@ GENERÁTOR ANGLICKÝCH SLOV
 2) Pro generaci náhodného textu si potřebujete nejprve spustit terminál
 3) Pomocí funkce RUN PYTHON FILE, která je vpravo nahoře spustíte program
 4) Program Vám vypsal náhodný text, který se podobá angličtině, jak je zmíněno v nadpisu
-5) Pokud chcete generovat znovu musíte opakovat spouštění funkce RUN PYTHON FILE nebo-li krok 3) 
+5) Pokud chcete generovat znovu musíte opakovat spouštění funkce RUN PYTHON FILE nebo-li krok 3)
+ 
 MŮJ POSTUP ŘEŠENÍ
   
 Jako první jsem si importoval random, protože hodlám pracovat s nějakou náhodou pro generování slov
